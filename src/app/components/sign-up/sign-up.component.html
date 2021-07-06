@@ -1,0 +1,40 @@
+<div *ngIf="isloding" class="loader">
+    <img src="/assets/loding.gif">
+  </div>
+<div class="wrapper">
+    <div class="form-box">
+        <form [formGroup]="user">
+            <h2 style="text-align: center;">Create your Account</h2>
+            <mat-form-field>
+                <mat-label>Username </mat-label>
+                <input type="text" matInput name="username " formControlName=username>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password </mat-label>
+                <input type="text" matInput name="password " formControlName=password>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Email </mat-label>
+                <input type="text" matInput name="email "formControlName=email>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Phone </mat-label>
+                <input type="number" matInput name="phone " formControlName=phone>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>UserType </mat-label>
+                <input type="text" matInput name="userType " formControlName=userType>
+            </mat-form-field>
+
+            <button style="background-color: hotpink; color: white;" mat-flat-button (click)="signup()">Create Account</button>
+            <button style="margin-left:12px ;" type="reset" mat-raised-button>Reset</button>
+
+
+
+        </form>
+    </div>
+</div>
